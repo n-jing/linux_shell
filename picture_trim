@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd $1
+
+for f in *;
+do
+    if [ "${f##*.}"x = "png"x ]||[ "${f##*.}"x = "jpg"x ]||[ "${f##*.}"x = "bmp"x  ];then
+        echo $f
+        convert $f -trim $f
+    fi
+done

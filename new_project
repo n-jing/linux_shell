@@ -1,0 +1,12 @@
+#!/bin/bash
+mkdir build src inc doc
+touch README.md
+cd src
+cp /home/jing/usr/shell/maint main.cpp
+cp /home/jing/usr/shell/cmaket CMakeLists.txt
+cd ../
+cp /home/jing/usr/shell/mcmaket CMakeLists.txt 
+cp /home/jing/usr/shell/C__gitignore .gitignore
+cd doc
+cp /home/jing/usr/shell/doc_cmake CMakeLists.txt
+cp /home/jing/usr/shell/Doxyfile Doxyfile 

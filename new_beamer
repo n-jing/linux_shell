@@ -1,0 +1,39 @@
+#!/bin/bash
+
+RED='\033[31;1m'
+P='\033[35;1m'
+NC='\033[0m' # No Color
+
+if [ $# != 1 ]
+then
+    echo -e "[${RED} error ${NC}]: no report file"
+    exit
+fi
+
+if [[ $1 != *".tex" ]]
+then
+    echo -e "[${RED} error ${NC}]: report file is not latex"
+    exit
+fi
+
+if [[ $1 = *"/"* ]]
+then
+    dir=${1%/*}
+    mkdir -p ${dir}
+    touch $1
+    cd ${dir}
+    cat /home/jing/usr/shell/beamerthemesingapore.sty > beamerthemesingapore.sty
+    mkdir figs
+    mkdir draw
+    mkdir screen
+    cd -
+    cat /home/jing/usr/shell/beamer_template.tex > $1
+else
+    touch $1
+    cat /home/jing/usr/shell/beamerthemesingapore.sty > beamerthemesingapore.sty
+    mkdir figs
+    mkdir draw
+    mkdir screen
+    cat /home/jing/usr/shell/beamer_template.tex > $1
+fi
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PARA_CNT=$#
+TRASH_DIR="/home/jing/.trash"
+
+for i in $*;
+do
+		echo "warning: remove" $i "to ~/.trash"
+    STAMP=`date +%s`
+    fileName=`basename $i`
+    mv $i $TRASH_DIR/$fileName.$STAMP
+done

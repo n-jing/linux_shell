@@ -1,0 +1,19 @@
+#!/bin/bash
+
+touch $1
+if [ ! -d "figs" ]
+then
+  mkdir figs
+fi
+
+if [ ! -d "draw" ]
+then
+  mkdir draw
+fi
+
+if [ ! -d "screen" ]
+then
+  mkdir screen
+fi	
+
+cat /home/jing/usr/shell/template-sigconf/aaatemplate-sigconf.tex > $1

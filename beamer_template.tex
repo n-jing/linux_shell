@@ -1,0 +1,71 @@
+\documentclass[UTF8]{beamer}
+%\usepackage{ctex}                 %使用中文要添加，可解决中文文档输入
+\usepackage{newtxtext,newtxmath}  %字重齐全的高质量数学字体
+\usepackage{mathrsfs}             %大写ABC的花体使用命令是\mathscr{}
+\usepackage{graphicx}             %添加图片
+\graphicspath{{./figs/}{./draw/}{./screen/}}
+\usepackage{bm}                   %专门处理数学粗体的bm宏包,使用命令是\bm{}
+\usepackage{extarrows}            %延长符号，可在=，->等符号加多个字母
+\usefonttheme{professionalfonts}  %这个更好看些，数学字体
+\usepackage{indentfirst}          %首行缩进
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{subfigure}
+\usepackage[english]{babel}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{tikz}
+\setlength{\parindent}{2em}      %首行缩进2字符
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{caption}[numbered]
+
+\usepackage{alphalph}
+\renewcommand*{\thesubfigure}{%
+\alphalph{\value{subfigure}}%
+}%
+
+\usetheme{singapore}            % 幻灯片模板选择singapore
+\usecolortheme{sidebartab}      % 幻灯片模板的色彩sidebartab
+\AtBeginSection[]{              % 幻灯片框架% 在每个Section前都会加入的Frame,
+    \begin{frame}[plain]
+        \frametitle{Outline}
+        \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/show/shaded]
+    \end{frame} 
+}
+
+\title{Template}  % 幻灯片封面
+\subtitle{Template}
+
+\author[Arthur, Doe] % (optional, for multiple authors)
+{ZICHUN ZHONG\inst{1} \and WENPING WANG\inst{2} \and XIAOHU GUO\inst{3}}
+ 
+\institute[VFU] % (optional)
+{
+  \inst{1}%
+  Wayne State University
+  \and
+  \inst{2}%
+  The University of Hong Kong
+  \and
+  \inst{3}%
+  University of Texas at Dallas
+}
+ 
+\date[VLC 2013] % (optional)
+     {\today
+       \newline
+     \\ reported by Jing JIANG}
+
+\begin{document}
+\begin{frame}[plain]
+  %plain格式使得一帧的最上面是白色的，没有plain，会有色彩
+  \titlepage
+\end{frame}
+\begin{frame}[plain]               % 幻灯片目录
+  \frametitle{Outline}
+  \tableofcontents[sectionstyle=show/show,subsectionstyle=show/show/hide]
+\end{frame}
+
+\end{document}
