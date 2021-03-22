@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sed -i -e 's/\([^:]\)\(map\)\([<]\)/\1std::map\3/g' -e 's/\([^:]\)\(vector\)\([<]\)/\1std::vector\3/g' -e 's/\([^:]\)\(list\)\([<]\)/\1std::list\3/g' -e 's/\([^:]\)\(array\)\([<]\)/\1std::array\3/g' -e 's/\([^:]\)\(pair\)\([<]\)/\1std::pair\3/g' -e 's/\([^:]\)\(set\)\([<]\)/\1std::set\3/g' $1

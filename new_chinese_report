@@ -1,0 +1,40 @@
+#!/bin/bash
+
+RED='\033[31;1m'
+P='\033[35;1m'
+NC='\033[0m' # No Color
+
+if [ $# != 1 ]
+then
+    echo -e "[${RED} error ${NC}]: no report file"
+    exit
+fi
+
+if [[ $1 != *".tex" ]]
+then
+    echo -e "[${RED} error ${NC}]: report file is not latex"
+    exit
+fi
+
+if [[ $1 == *"/"* ]]
+then
+    echo -e "[${P} warning ${NC}]: report can only be generate in local dir"
+    exit
+fi
+
+if [ ! -d "figs" ]
+then
+  mkdir figs
+fi
+
+if [ ! -d "draw" ]
+then
+  mkdir draw
+fi
+
+if [ ! -d "screen" ]
+then
+  mkdir screen
+fi	
+
+cat /home/jing/usr/shell/chinese_template.tex > $1

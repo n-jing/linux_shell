@@ -1,4 +1,4 @@
-#! /home/jing/Downloads/software/ParaView-5.7.0-MPI-Linux-Python3.7-64bit/bin/pvpython
+#! /home/jing/Downloads/software/ParaView-5.8.0-MPI-Linux-Python3.7-64bit/bin/pvpython
 
 import os
 import sys
@@ -70,3 +70,6 @@ for root, dirs, files in os.walk(path):
 
         Delete(cubevtk)
         del cubevtk
+
+os._exit(0)        
+        

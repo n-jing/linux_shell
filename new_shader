@@ -1,0 +1,4 @@
+#! /bin/bash
+
+mkdir build
+cp -r /home/jing/usr/jinglib/shader/* $1

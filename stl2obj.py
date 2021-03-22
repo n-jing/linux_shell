@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 #
 # stl2obj.py: Script to convert .stl ASCII (3D systems) mesh into .obj ASCII mesh (wavefront).
 #
@@ -105,7 +105,7 @@ num_v = int(num_v)
 if (num_v < 3):
     ascii_file = os.path.splitext(stlfilename)[0] + "_ascii.stl"
 
-    convert_cmd = "python binary_stl_to_ascii.py " + stlfilename + " " + ascii_file
+    convert_cmd = "python2 ~/usr/shell/binary_stl_to_ascii.py " + stlfilename + " " + ascii_file
     print(convert_cmd)
     os.system(convert_cmd)
     stlfile = open(ascii_file, "r")
